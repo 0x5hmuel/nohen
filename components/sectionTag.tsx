@@ -8,9 +8,9 @@ interface SectionTagProps {
 
 const SectionTag = ({ text, className }: SectionTagProps) => {
   return (
-    <div className="flex items-center gap-x-3">
-      <ArrowEight />
-      <p className={`${clsx('font-satoshi font-[20px] uppercase font-medium', className)}`}>{text}</p>
+    <div className={clsx("flex items-center gap-x-3", className)}>
+      <ArrowEight className="" />
+      <p className={`${clsx('font-satoshi text-[20px] uppercase font-medium', className)}`}>{text}</p>
     </div>
   )
 }

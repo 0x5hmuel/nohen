@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { ArrowRightIcon, MenuIcon, XIcon } from "lucide-react"
 import { motion, AnimatePresence } from "motion/react"
+import { usePathname } from "next/navigation"
 import { NohenLogo } from "./nohenLogo"
 const navLinks = [
   { href: "/", label: "HOME" },
@@ -13,9 +14,8 @@ const navLinks = [
   { href: "/contact", label: "CONTACT" },
 ]
 
-
-
-export default function Navbar({ activeHref = "/" }: { activeHref?: string }) {
+export default function Navbar() {
+  const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
@@ -39,7 +39,7 @@ export default function Navbar({ activeHref = "/" }: { activeHref?: string }) {
           </Link>
           <ul className="hidden md:flex items-center gap-8 lg:gap-10">
             {navLinks.map(({ href, label }) => {
-              const isActive = activeHref === href
+              const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href)
               return (
                 <li key={href}>
                   <Link
@@ -98,7 +98,7 @@ export default function Navbar({ activeHref = "/" }: { activeHref?: string }) {
             >
               <ul className="flex flex-col px-6 py-4 gap-1">
                 {navLinks.map(({ href, label }, i) => {
-                  const isActive = activeHref === href
+                  const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href)
                   return (
                     <motion.li
                       key={href}

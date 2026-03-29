@@ -9,6 +9,8 @@ import Mission from "@/components/pages/about-us/mission"
 import Identity from "@/components/pages/about-us/identity"
 import Team from "@/components/pages/about-us/team"
 import Locations from "@/components/pages/about-us/locations"
+import CoreValues from "@/components/pages/about-us/coreValues"
+import WorkHistory from "@/components/pages/about-us/workHistory"
 
 const Page = () => {
   return (
@@ -22,6 +24,8 @@ With a strong focus on clarity and purpose, we transform complex ideas and archi
       </div>
       <Identity />
       <Mission />
+      <CoreValues />
+      <WorkHistory />
       <Team />
       <Locations />
     </div>
