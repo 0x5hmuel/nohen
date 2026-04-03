@@ -89,9 +89,11 @@ const Services = () => {
 
           <div className="w-full flex items-center justify-center">
             <Link href="/services" className="mx-auto w-fit">
-              <Button className=" ml-auto gap-5 rounded-full md:w-69.25 px-[14.15px] py-[9.9px] text-black uppercase font-semibold h-17.5" style={{ backgroundColor: "#EFBF04" }}>
-                <p className="text-sm! font-dm-sans">More of our services</p>
-                <ArrowIcon />
+              <Button className=" ml-auto gap-5 rounded-full md:w-69.25 px-[14.15px] py-[9.9px] text-black uppercase font-semibold h-17.5" style={{ backgroundColor: "#EFBF04" }} asChild>
+                <Link href="/services">
+                  <p className="text-sm! font-dm-sans">More of our services</p>
+                  <ArrowIcon />
+                </Link>
               </Button>
             </Link>
           </div>

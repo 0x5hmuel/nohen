@@ -10,6 +10,7 @@ import Converra from "@/assets/svgs/converra.svg"
 import Nietzsche from "@/assets/svgs/nietzsche.svg"
 import Layers from "@/assets/svgs/layers.svg"
 import Nexora from "@/assets/svgs/nexora.svg"
+import Link from "next/link"
 
 const Network = () => {
   const row1 = [
@@ -31,9 +32,11 @@ const Network = () => {
       <SectionTag text="GLobal Network" className="text-black" />
       <div className="flex items-end justify-between">
         <GradientText text="Partnering with leading enterprises around the world." className="md:w-3/6" />
-        <Button className="rounded-full min-h-17.5 gap-5 md:w-65.75 uppercase px-[9.9px] py-[14.15px]">
-          Partner With Us
-          <ArrowRightIcon />
+        <Button className="rounded-full min-h-17.5 gap-5 md:w-65.75 uppercase px-[9.9px] py-[14.15px]" asChild>
+          <Link href="/contact/#contactForm">
+            Partner With Us
+            <ArrowRightIcon />
+          </Link>
         </Button>
       </div>
 

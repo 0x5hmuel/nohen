@@ -7,7 +7,7 @@ import BoxesImage from "@/assets/images/boxes.png"
 import Construction from "@/assets/images/construction.png"
 import Design from "@/assets/images/interior_design.png"
 import SectionTag from "@/components/sectionTag";
-
+import ArchitecturalDesign from "@/assets/images/68a687ca482b9536e4542097_service-icon-2 1(1).png"
 
 const Page = () => {
   return (
@@ -20,7 +20,7 @@ const Page = () => {
         <ServiceCard image={BoxesImage} id="architecturalDesign" index={1} title="Architectural Design" content="As a leading architectural firm in Abuja, Nohen Construct II Ltd provides comprehensive architectural design services for residential, commercial, institutional, and specialized projects. Our work is driven by a commitment to creating buildings that are functional, timeless, and responsive to their environment. 
 Our architects in Abuja, Nigeria begin each project by carefully studying the client’s vision, site conditions, and regulatory requirements. We translate these factors into clear, innovative design solutions supported by detailed technical drawings and documentation suitable for approval and construction. Every design is developed with careful attention to spatial efficiency, structural feasibility, sustainability, and long-term performance.
 We are particularly recognized for handling complex and technically demanding projects, including constrained sites and unconventional design challenges. Clients trust our architectural design services in Abuja to deliver buildings that are not only visually compelling but also practical, buildable, and enduring. We continue to serve individuals and organizations seeking reliable architectural expertise in Abuja and across Nigeria." gradientText="Arcitecture Design" />
-        <ServiceCard image={Construction} id="constructionDevelopment" index={2} title="Construction Development" content="Nohen Constructii Ltd is a trusted construction company in Abuja, delivering high-quality building construction services for a wide range of project types. We transform architectural concepts into durable, well-executed physical structures that meet design specifications, safety standards, and client expectations.
+        <ServiceCard image={ArchitecturalDesign} id="constructionDevelopment" index={2} title="Construction Development" content="Nohen Constructii Ltd is a trusted construction company in Abuja, delivering high-quality building construction services for a wide range of project types. We transform architectural concepts into durable, well-executed physical structures that meet design specifications, safety standards, and client expectations.
 
  
 Our building construction services in Abuja cover every phase of the construction process, including site preparation, structural works, finishing, and project delivery. We work with experienced engineers, skilled craftsmen, and reliable suppliers to ensure precision, quality, and consistency throughout the construction lifecycle.

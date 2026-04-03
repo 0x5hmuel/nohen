@@ -11,7 +11,7 @@ import Process from "@/components/pages/landing/process";
 export default function Home() {
   return (
     <main className="w-screen relative">
-      <Hero image={HeroImage} alt="" title="Built for Complexity. Designed for Excellence." metaText={<></>} description="Nohen Constructii is steady transforming challenging ideas, constrained sites, and complex designs into exceptional built environments." buttonLink="/about" isLink={true} buttonText="Start a project" />
+      <Hero image={HeroImage} alt="" title="Complexity, Resolved. Excellence, Delivered" metaText={<></>} description="Nohen Constructii is steady transforming challenging ideas, constrained sites, and complex designs into exceptional built environments." buttonLink="/about" isLink={true} buttonText="Start a project" />
       <Network />
       <AboutUs />
       <Services />

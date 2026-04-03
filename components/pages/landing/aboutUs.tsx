@@ -1,16 +1,17 @@
 import GradientText from "@/components/gradientText"
 import SectionTag from "@/components/sectionTag"
 import { Button } from "@/components/ui/button"
-import AboutImage from "@/assets/images/about_image.png"
+import AboutImage from "@/assets/images/Rectangle 24774.png"
 import Image from "next/image"
-import { ArrowRightIcon, PlusIcon } from "lucide-react"
+import { ArrowRightIcon } from "lucide-react"
+import Link from "next/link"
 import StatItem from "@/components/statView"
 
 const info = [
   {
     count: 2010,
     title: "Establishment.",
-    description: "Over a decade of transforming spaces & Business.",
+    description: "From residential owners to Government officials and we are coming to you too.",
     showIcon: false
   },
   {
@@ -22,13 +23,13 @@ const info = [
   {
     count: 200,
     title: "Happy Clients",
-    description: "People who love & Trusts our Works.",
+    description: "From residential owners to Government officials and we are coming to you too.",
     showIcon: true
   },
   {
-    count: 10,
+    count: 9,
     title: "Ongoing Projects",
-    description: "Homes to offices, we deliver excellence.",
+    description: "7+ Residential Construction Projects and 2 Commercial Projects are currently in progress across different states in nigeria.",
     showIcon: true
   }
 ]
@@ -40,16 +41,17 @@ const AboutUs = () => {
         <SectionTag text="About Us" className="text-black" />
         <GradientText text="From homes to offices, we bring your vision to life. Our results speak for themselves." />
         <div className="flex items-center gap-x-5 justify-between w-full">
-          <Button className="rounded-full md:w-65.75 px-[14.9px] h-17.5 gap-10">
-
-            KNOW MORE ABOUT US
-            <ArrowRightIcon />
+          <Button className="rounded-full md:w-65.75 px-[14.9px] h-17.5 gap-10" asChild>
+            <Link href="/about-us#ourStory">
+              KNOW MORE ABOUT US
+              <ArrowRightIcon />
+            </Link>
           </Button>
           <p className="text-[25px] text-right" style={{ color: "gray" }}>Good design is invisible. It supports life quietly, with clarity and purpose.</p>
         </div>
-        <div>
-          <div className="relative overflow-hidden">
-            <Image src={AboutImage} alt="" width={621} height={400} />
+        <div className="h-full">
+          <div className="relative overflow-hidden h-full flex items-start bg-red-500">
+            <Image src={AboutImage} alt="" width={621} height={700} className="object-cover w-full" />
           </div>
         </div>
       </div>

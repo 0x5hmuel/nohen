@@ -5,7 +5,7 @@ import { ChevronRightIcon } from "lucide-react"
 
 const Connect = () => {
   return (
-    <div className="bg-white py-20">
+    <div className="bg-white py-20" id="contactForm">
       <div className="grid border-t grid-cols-[1fr_2fr] items-start px-10">
         <div className="p-5 h-full">
           <SectionTag text="Let's Connect" className="text-black" />

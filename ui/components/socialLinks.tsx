@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "motion/react"
 import { useState, useRef } from "react"
 
 const socials = [
-  { href: "#", name: "Facebook" },
+  { href: "www.tiktok.com/@nohenconstructiiltd", name: "TikTok" },
   { href: "#", name: "Twitter" },
   { href: "#", name: "LinkedIn" },
-  { href: "#", name: "Instagram" },
+  { href: "https://www.instagram.com/nohenconstructiiltd?igsh=ZGd5Yjd5czJkcmky&utm_source=qr", name: "Instagram" },
 ]
 
 const SocialLink = ({ href, name }: { href: string; name: string }) => {
@@ -39,6 +39,7 @@ const SocialLink = ({ href, name }: { href: string; name: string }) => {
   return (
     <a
       ref={ref}
+      target="_blank"
       href={href}
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}

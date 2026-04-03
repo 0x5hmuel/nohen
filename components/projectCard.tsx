@@ -57,29 +57,27 @@ export default function ProjectCards({ cards }: ProjectCardsProps) {
                 <ArrowUpRightIcon size={15} className="text-black" strokeWidth={2.5} />
               </Link>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 z-10 p-5 md:p-6">
-              <motion.p
+            <motion.div
+              className="absolute bottom-0 left-0 right-0 z-10 p-5 md:p-6"
+              animate={{
+                opacity: isActive ? 1 : 0,
+                y: isActive ? 0 : 20,
+              }}
+              transition={{ duration: 0.35, ease: [0.32, 0.72, 0, 1] }}
+            >
+              <p
                 className="bg-linear-to-r font-dm-sans bg-clip-text text-[35px] from-[#EFBF04] to-white font-bold leading-tight mb-2 whitespace-nowrap overflow-hidden text-ellipsis"
                 style={{
                   letterSpacing: "-0.02em",
                 }}
-                transition={{ duration: 0.35 }}
               >
                 {card.title}
-              </motion.p>
+              </p>
 
-              <motion.p
-                className="text-white/60 font-dm-sans font-outfit text-[12px] md:text-[25px] leading-relaxed"
-                animate={{
-                  opacity: isActive ? 1 : 1,
-                  y: isActive ? 0 : 8,
-                  height: isActive ? "auto" : 0,
-                }}
-                transition={{ duration: 0.3, delay: isActive ? 0.1 : 0 }}
-              >
+              <p className="text-white/60 font-dm-sans font-outfit text-[12px] md:text-[25px] leading-relaxed">
                 {card.description}
-              </motion.p>
-            </div>
+              </p>
+            </motion.div>
             <motion.div
               className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#EFBF04]"
               animate={{ opacity: isActive ? 1 : 0 }}

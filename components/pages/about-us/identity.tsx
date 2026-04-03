@@ -1,10 +1,10 @@
 "use client"
 
 import Image from "next/image"
-import AboutHero from "@/assets/images/who_we_are.png"
 import { motion } from "motion/react"
 import { useRef } from "react"
 import { useInView } from "motion/react"
+import IdentityImage from "@/assets/images/Rectangle 24787(1).png"
 
 const floatingWords = [
   { text: "Challenging", className: "right-[5%] sm:right-28 top-[60%] sm:top-72" },
@@ -23,7 +23,7 @@ export default function Identity() {
 
       {/* Background image */}
       <Image
-        src={AboutHero}
+        src={IdentityImage}
         height={751}
         priority
         alt="who we are"

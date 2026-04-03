@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ServicesHero from "@/assets/images/core_values.png"
+import ServicesHero from "@/assets/images/Frame 2121453806.png"
 import SectionTag from "@/components/sectionTag";
 
 const coreValues = [
@@ -55,12 +55,14 @@ export default function CoreValues() {
         </div>
 
         <div className="relative w-[220px] lg:w-[260px] shrink-0 mx-auto lg:mx-0 aspect-[9/16] rounded-none overflow-hidden">
-          <Image
-            src={ServicesHero}
-            alt="Our Core Values"
-            fill
-            className="object-cover"
-          />
+          <div className="bg-black/20">
+            <Image
+              src={ServicesHero}
+              alt="Our Core Values"
+              fill
+              className="object-cover"
+            />
+          </div>
 
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-4">
             <div className="flex items-center w-full justify-center relative">
