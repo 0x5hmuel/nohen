@@ -15,8 +15,8 @@ import WorkHistory from "@/components/pages/about-us/workHistory"
 const Page = () => {
   return (
     <div className="relative">
-      <Hero image={AboutUsHero} metaText={""} title="Experience That Builds Confidence." description="Experience That Builds Confidence.
-With a strong focus on clarity and purpose, we transform complex ideas and architectural concepts into meaningful spaces that connect people to place — both today and for years to come." isLink={false} buttonLink="" alt="" buttonText="Browse Portfolio" />
+      <Hero image={AboutUsHero} metaText={""} title="Proven Expertise in Complex Project Delivery." description="Experience That Builds Confidence.
+With a strong focus on clarity and purpose, we transform complex ideas and architectural concepts into meaningful spaces that connect people to place — both today and for years to come." isLink={true} buttonLink="/case-studies#projects" alt="" buttonText="Browse Portfolio" />
       <Story />
       <Difference />
       <div className="p-17.5 relative text-center">

@@ -14,6 +14,7 @@ interface ServiceCardProps {
   reverse?: boolean
   title: string
   content: string
+  onInView?: (id: string) => void
 }
 
 export default function ServiceCard({
@@ -24,11 +25,12 @@ export default function ServiceCard({
   reverse = false,
   title,
   content,
+  onInView,
 }: ServiceCardProps) {
   const [expanded, setExpanded] = useState(false)
 
-  const preview = content.slice(0, 120) + "..."
-  const hasMore = content.length > 120
+  const preview = content.slice(0, 500) + "..."
+  const hasMore = content.length > 500
 
   return (
     <motion.div
@@ -36,7 +38,8 @@ export default function ServiceCard({
       className={`w-full border-y-[#EFBF04] border-y-8 flex bg-white ${reverse ? "flex-row-reverse" : "flex-row"} items-center gap-10 border-b border-black/10 md:px-10 lg:px-17.5`}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      onViewportEnter={() => onInView?.(id)}
+      viewport={{ once: false, margin: "-50%" }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="flex-1 space-y-6">
@@ -58,6 +61,8 @@ export default function ServiceCard({
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                className="text-justify text-[25px] text-light"
+                style={{ letterSpacing: "-4%", lineHeight: "108%" }}
               >
                 {content}
               </motion.p>
@@ -68,6 +73,8 @@ export default function ServiceCard({
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
+                className="line-clamp-5 text-[25px] text-light"
+                style={{ letterSpacing: "-4%", lineHeight: "108%" }}
               >
                 {hasMore ? preview : content}
               </motion.p>

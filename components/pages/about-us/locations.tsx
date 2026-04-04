@@ -1,6 +1,6 @@
 import GradientText from "@/components/gradientText"
 import SectionTag from "@/components/sectionTag"
-import AboutImage from "@/assets/images/about_image.png"
+import AboutImage from "@/assets/images/Rectangle 24795.png"
 import Image from "next/image"
 
 const locations = [
@@ -8,16 +8,12 @@ const locations = [
     title: "Head Office",
     location: "116 road 6th Avenue, Gwarimpa estate, FCT, Abuja"
   },
-  {
-    title: "Branch Office",
-    location: "116 road 6th Avenue, Gwarimpa estate, FCT, Abuja"
-  }
 ]
 
 const Locations = () => {
   return (
-    <section className="p-17.5 bg-white grid md:grid-cols-2 relative md:min-h-129.25">
-      <div className="space-y-5">
+    <section className="p-17.5 bg-white grid md:grid-cols-2 relative md:min-h-129.25 items-center">
+      <div className="space-y-8">
         <SectionTag text="our locations" className="text-black" />
         <GradientText text="Tour our Office Spaces" className="text-[50px]!" />
         <div className="text-black space-y-3">

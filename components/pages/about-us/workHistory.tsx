@@ -25,7 +25,7 @@ const WorkHistory = () => {
   return (
     <div className="bg-white p-10 space-y-10">
       <div className="relative">
-        <h4 className="font-dm-sans font-medium text-[160px] uppercase bg-clip-text text-transparent bg-cover bg-center" style={{ letterSpacing: "-8%", lineHeight: "88%", backgroundImage: `url(${ServicesHero.src})` }}>Recognised for design - trusted for results.</h4>
+        <h4 className="font-dm-sans font-medium text-[160px] uppercase bg-clip-text text-transparent bg-cover bg-center" style={{ letterSpacing: "-8%", lineHeight: "88%", backgroundImage: `url(${ServicesHero.src})` }}>Defined by the Challenges We Overcome</h4>
       </div>
       <div className="w-full mx-auto border-2 divide-y border-black/2 rounded-sm divide-gray-200">
         {awards.map((award) => (

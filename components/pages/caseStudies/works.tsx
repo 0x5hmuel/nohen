@@ -15,7 +15,7 @@ interface Project {
 }
 
 interface ProjectGridProps {
-  projects: [Project, Project, Project, Project]
+  projects: Project[]
 }
 
 const ProjectItem = ({
@@ -101,16 +101,29 @@ const ProjectItem = ({
 }
 
 export default function ProjectGrid({ projects }: ProjectGridProps) {
+  const pairs = [];
+
+  for (let i = 0; i < projects.length; i += 2) {
+    pairs.push(projects.slice(i, i + 2));
+  }
+
   return (
     <section className="w-full bg-[#FAFAF7] space-y-5">
-      <div className="grid grid-cols-[3fr_2fr] gap-5">
-        <ProjectItem project={projects[0]} index={0} className="" />
-        <ProjectItem project={projects[1]} index={1} className="" />
-      </div>
-      <div className="grid grid-cols-[2fr_3fr] gap-5">
-        <ProjectItem project={projects[2]} index={2} className="" />
-        <ProjectItem project={projects[3]} index={3} className="" />
-      </div>
+      {pairs.map((pair, pairIndex) => {
+        const isEven = pairIndex % 2 === 0;
+
+        return (
+          <div
+            key={pairIndex}
+            className={`grid gap-5 ${isEven ? "grid-cols-[3fr_2fr]" : "grid-cols-[2fr_3fr]"}`}
+          >
+            <ProjectItem project={pair[0]} index={pairIndex * 2} className="" />
+            {pair[1] && (
+              <ProjectItem project={pair[1]} index={pairIndex * 2 + 1} className="" />
+            )}
+          </div>
+        );
+      })}
     </section>
-  )
+  );
 }
