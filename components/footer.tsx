@@ -1,16 +1,15 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import { NohenLogo } from "./nohenLogo"
-import { motion } from "motion/react"
-import bgImage from "@/assets/images/footer.png"
-import HorizontalImages from "@/assets/images/horizontal_lines.png"
-import { ArrowUp } from "lucide-react"
-
+import Image from "next/image";
+import { NohenLogo } from "./nohenLogo";
+import { motion } from "motion/react";
+import bgImage from "@/assets/images/footer.png";
+import HorizontalImages from "@/assets/images/horizontal_lines.png";
+import { ArrowUp } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full font-dm-sans text-white overflow-hidden h-[834px]">
+    <footer className="relative w-full font-dm-sans text-white overflow-hidden h-208.5">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -43,13 +42,13 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="text-lg font-semibold mb-4 text-gray-400">
-            Supports
-          </h4>
+          <h4 className="text-lg font-semibold mb-4 text-gray-400">Supports</h4>
           <div className="space-y-3 text-lg text-gray-400">
             <p>
               Call us directly? <br />
-              <span className="underline text-white -tracking-widest font-dm-sans">(123) 567 8901</span>
+              <span className="underline text-white -tracking-widest font-dm-sans">
+                (123) 567 8901
+              </span>
             </p>
             <p>
               Need support? <br />
@@ -70,13 +69,13 @@ export default function Footer() {
       </div>
       <div className="absolute -bottom-10 pl-5 flex flex-col uppercase  mix-blend-luminosity">
         <p
-          className="text-[437.79px] bg-gradient-to-b mix-blend-luminosity relative -bottom-40 to-[#EFBF04]/5 from-[#181818]/5 bg-clip-text text-transparent"
+          className="text-[437.79px] bg-linear-to-b mix-blend-luminosity relative -bottom-40 to-[#EFBF04]/5 from-[#181818]/5 bg-clip-text text-transparent"
           style={{ lineHeight: "94%", letterSpacing: "-0.08em" }}
         >
           Nohen
         </p>
         <p
-          className="text-[230px] relative -bottom-10 w-full bg-gradient-to-b mix-blend-luminosity from-[#EFBF04]/5 to-[#181818]/5 bg-clip-text text-transparent"
+          className="text-[230px] relative -bottom-10 w-full bg-linear-to-b mix-blend-luminosity from-[#EFBF04]/5 to-[#181818]/5 bg-clip-text text-transparent"
           style={{ lineHeight: "94%", letterSpacing: "-0.08em" }}
         >
           Constructii
@@ -89,5 +88,5 @@ export default function Footer() {
         <ArrowUp />
       </motion.button>
     </footer>
-  )
+  );
 }

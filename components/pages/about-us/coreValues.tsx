@@ -1,6 +1,7 @@
 import Image from "next/image";
-import ServicesHero from "@/assets/images/Frame 2121453806.png"
+import ServicesHero from "@/assets/images/Frame 2121453806.png";
 import SectionTag from "@/components/sectionTag";
+import { Reveal, Stagger, StaggerItem } from "@/components/animations/reveal";
 
 const coreValues = [
   {
@@ -46,49 +47,55 @@ const rightValues = coreValues.slice(3, 6);
 
 export default function CoreValues() {
   return (
-    <section className="bg-black text-white py-16 px-6 sm:px-12 border-t border-white/10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-10 items-center">
-        <div className="flex flex-col gap-0">
-          {leftValues.map((value) => (
-            <ValueCard key={value.number} {...value} />
-          ))}
-        </div>
+    <Reveal>
+      <section className="bg-black text-white py-16 px-6 sm:px-12 border-t border-white/10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-10 items-center">
+          <Stagger className="flex flex-col gap-0">
+            {leftValues.map((value) => (
+              <StaggerItem key={value.number}>
+                <ValueCard {...value} />
+              </StaggerItem>
+            ))}
+          </Stagger>
 
-        <div className="relative w-[220px] lg:w-[260px] shrink-0 mx-auto lg:mx-0 aspect-[9/16] rounded-none overflow-hidden">
-          <div className="bg-black/20">
-            <Image
-              src={ServicesHero}
-              alt="Our Core Values"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-4">
-            <div className="flex items-center w-full justify-center relative">
-              <SectionTag text="" className="rotate-180 top-10!" />
-              <SectionTag text="" className="" />
+          <div className="relative w-[220px] lg:w-[260px] shrink-0 mx-auto lg:mx-0 aspect-[9/16] rounded-none overflow-hidden">
+            <div className="bg-black/20">
+              <Image
+                src={ServicesHero}
+                alt="Our Core Values"
+                fill
+                className="object-cover"
+              />
             </div>
 
-            <p
-              className="text-center text-[#FAFAFA] text-[40px] font-black font-dm-sans leading-tight mix-blend-soft-light tracking-wide uppercase"
-              style={{ letterSpacing: "-8%", lineHeight: "94%" }}
-            >
-              OUR CORE
-              <br />
-              VALUES
-            </p>
-          </div>
-        </div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 px-4">
+              <div className="flex items-center w-full justify-center relative">
+                <SectionTag text="" className="rotate-180 top-10!" />
+                <SectionTag text="" className="" />
+              </div>
 
-        {/* Right Column — Values 4–6 */}
-        <div className="flex flex-col gap-0">
-          {rightValues.map((value) => (
-            <ValueCard key={value.number} {...value} />
-          ))}
+              <p
+                className="text-center text-[#FAFAFA] text-[40px] font-black font-dm-sans leading-tight mix-blend-soft-light tracking-wide uppercase"
+                style={{ letterSpacing: "-8%", lineHeight: "94%" }}
+              >
+                OUR CORE
+                <br />
+                VALUES
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column — Values 4–6 */}
+          <Stagger className="flex flex-col gap-0">
+            {rightValues.map((value) => (
+              <StaggerItem key={value.number}>
+                <ValueCard {...value} />
+              </StaggerItem>
+            ))}
+          </Stagger>
         </div>
-      </div>
-    </section>
+      </section>
+    </Reveal>
   );
 }
 

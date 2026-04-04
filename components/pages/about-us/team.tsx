@@ -1,10 +1,11 @@
-import GradientText from "@/components/gradientText"
-import { motion } from "motion/react"
-import SectionTag from "@/components/sectionTag"
-import { StaticImageData } from "next/image"
-import Image from "next/image"
-import UserOne from "@/assets/images/user_one.png"
-import UserTwo from "@/assets/images/user_two.png"
+import GradientText from "@/components/gradientText";
+import { motion } from "motion/react";
+import SectionTag from "@/components/sectionTag";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
+import UserOne from "@/assets/images/user_one.png";
+import UserTwo from "@/assets/images/user_two.png";
+import { Reveal, Stagger, StaggerItem } from "@/components/animations/reveal";
 
 const teamMembers = [
   { image: UserOne, name: "Jane Doe", role: "Lead Architect" },
@@ -13,39 +14,45 @@ const teamMembers = [
   { image: UserTwo, name: "Emeka Nwosu", role: "Project Manager" },
   { image: UserOne, name: "Sara Ali", role: "Urban Planner" },
   { image: UserTwo, name: "David Eze", role: "Site Supervisor" },
-]
+];
 
 const Team = () => {
   return (
-    <section id="ourTeam" className="bg-white p-17.5 ">
-      <div className="space-y-10">
-        <SectionTag text="our team" className="text-black" />
-        <div className="flex items-center text-[25px]">
-          <GradientText text="Meet the brilliant team powering our architectural innovations." />
-          <div className="">
-            <p className="font-outfit text-right font-light" style={{ color: 'gray' }}>
-              Our dedicated team members are here to serve you with excellence and professionalism.
-            </p>
+    <Reveal>
+      <section id="ourTeam" className="bg-white p-17.5 ">
+        <div className="space-y-10">
+          <SectionTag text="our team" className="text-black" />
+          <div className="flex items-center text-[25px]">
+            <GradientText text="Meet the brilliant team powering our architectural innovations." />
+            <div className="">
+              <p
+                className="font-outfit text-right font-light"
+                style={{ color: "gray" }}
+              >
+                Our dedicated team members are here to serve you with excellence
+                and professionalism.
+              </p>
+            </div>
           </div>
+          <Stagger className="grid grid-cols-3 gap-6">
+            {teamMembers.map((team, index: number) => (
+              <StaggerItem key={index}>
+                <TeamImages
+                  image={team.image}
+                  alt={team.name}
+                  name={team.name}
+                  role={team.role}
+                />
+              </StaggerItem>
+            ))}
+          </Stagger>
         </div>
-        <div className="grid grid-cols-3 gap-6">
-          {teamMembers.map((team, index: number) => (
-            <TeamImages
-              key={index}
-              image={team.image}
-              alt={team.name}
-              name={team.name}
-              role={team.role}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
+      </section>
+    </Reveal>
+  );
+};
 
-export default Team
-
+export default Team;
 
 export const TeamImages = ({
   image,
@@ -53,10 +60,10 @@ export const TeamImages = ({
   name,
   role,
 }: {
-  alt: string
-  image: StaticImageData
-  name: string
-  role: string
+  alt: string;
+  image: StaticImageData;
+  name: string;
+  role: string;
 }) => {
   return (
     <div className="relative overflow-hidden group cursor-pointer">
@@ -90,5 +97,5 @@ export const TeamImages = ({
         </motion.p>
       </motion.div>
     </div>
-  )
-}
+  );
+};

@@ -1,37 +1,38 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Link from "next/link"
-import { ArrowRightIcon, MenuIcon, XIcon } from "lucide-react"
-import { motion, AnimatePresence } from "motion/react"
-import { usePathname } from "next/navigation"
-import { NohenLogo } from "./nohenLogo"
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import { ArrowRightIcon, MenuIcon, XIcon } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { usePathname } from "next/navigation";
+import { NohenLogo } from "./nohenLogo";
 const navLinks = [
   { href: "/", label: "HOME" },
   { href: "/about-us", label: "ABOUT US" },
   { href: "/services", label: "SERVICES" },
   { href: "/case-studies", label: "CASE STUDIES" },
   { href: "/contact", label: "CONTACT" },
-]
+];
 
 export default function Navbar() {
-  const pathname = usePathname()
-  const [mobileOpen, setMobileOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10)
-    window.addEventListener("scroll", onScroll, { passive: true })
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
+    const onScroll = () => setScrolled(window.scrollY > 10);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header>
       <nav
-        className={`w-full fixed z-9999 top-0 overflow-hidden py-3 transition-colors duration-300 ${scrolled ? "bg-black/95 backdrop-blur-sm" : "bg-transparent"
-          }`}
+        className={`w-full fixed z-9999 top-0 overflow-hidden py-3 transition-colors duration-300 ${
+          scrolled ? "bg-black/95 backdrop-blur-sm" : "bg-transparent"
+        }`}
       >
-        <div className="relative z-10 flex items-center justify-between px-6 md:px-10 lg:px-16 h-[72px]">
+        <div className="relative z-10 flex items-center justify-between px-6 md:px-10 lg:px-16 h-18">
           <Link href="/" className="flex items-center gap-3 shrink-0 group">
             <div className="transition-transform duration-300 group-hover:scale-105">
               <NohenLogo />
@@ -39,37 +40,33 @@ export default function Navbar() {
           </Link>
           <ul className="hidden md:flex items-center gap-8 lg:gap-10">
             {navLinks.map(({ href, label }) => {
-              const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href)
+              const isActive =
+                href === "/" ? pathname === "/" : pathname.startsWith(href);
               return (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="relative group flex flex-col items-center gap-[5px]"
+                    className="relative group flex flex-col items-center gap-1.25"
                   >
-                    <span
-                      className="text-white text-[11px] tracking-[0.15em] font-medium transition-colors duration-200 group-hover:text-[#EFBF04] font-dm-sans"
-                    >
+                    <span className="text-white text-[11px] tracking-[0.15em] font-medium transition-colors duration-200 group-hover:text-[#EFBF04] font-dm-sans">
                       {label}
                     </span>
                     {/* Gold underline — always visible for active, slides in on hover */}
                     <span
-                      className={`h-[2px] bg-[#EFBF04] transition-all duration-300 ${isActive
-                        ? "w-full"
-                        : "w-0 group-hover:w-full"
-                        }`}
+                      className={`h-0.5 bg-[#EFBF04] transition-all duration-300 ${
+                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                      }`}
                     />
                   </Link>
                 </li>
-              )
+              );
             })}
           </ul>
           <Link
             href="/contact"
             className="hidden rounded-full py-4 md:inline-flex items-center gap-3 px-5 shrink-0 group transition-all duration-300 hover:brightness-110 active:scale-95 bg-[#EFBF04]"
           >
-            <span
-              className="text-black text-[11px] tracking-[0.14em] font-bold whitespace-nowrap font-barlow-condensed"
-            >
+            <span className="text-black text-[11px] tracking-[0.14em] font-bold whitespace-nowrap font-barlow-condensed">
               BOOK A CONSULTATION
             </span>
             <ArrowRightIcon
@@ -98,7 +95,8 @@ export default function Navbar() {
             >
               <ul className="flex flex-col px-6 py-4 gap-1">
                 {navLinks.map(({ href, label }, i) => {
-                  const isActive = href === "/" ? pathname === "/" : pathname.startsWith(href)
+                  const isActive =
+                    href === "/" ? pathname === "/" : pathname.startsWith(href);
                   return (
                     <motion.li
                       key={href}
@@ -112,17 +110,20 @@ export default function Navbar() {
                         className="flex items-center justify-between py-3 border-b border-white/5 group"
                       >
                         <span
-                          className={`text-[13px] tracking-[0.14em] font-medium transition-colors duration-200 font-barlow-condensed ${isActive ? "text-[#EFBF04]" : "text-white/80 group-hover:text-[#EFBF04]"
-                            }`}
+                          className={`text-[13px] tracking-[0.14em] font-medium transition-colors duration-200 font-barlow-condensed ${
+                            isActive
+                              ? "text-[#EFBF04]"
+                              : "text-white/80 group-hover:text-[#EFBF04]"
+                          }`}
                         >
                           {label}
                         </span>
                         {isActive && (
-                          <span className="w-4 h-[2px] bg-[#EFBF04]" />
+                          <span className="w-4 h-0.5 bg-[#EFBF04]" />
                         )}
                       </Link>
                     </motion.li>
-                  )
+                  );
                 })}
                 <motion.li
                   initial={{ x: -16, opacity: 0 }}
@@ -135,12 +136,14 @@ export default function Navbar() {
                     onClick={() => setMobileOpen(false)}
                     className="inline-flex items-center gap-3 px-5 py-3 w-full justify-center bg-[#EFBF04]"
                   >
-                    <span
-                      className="text-black text-[12px] tracking-[0.14em] font-bold font-barlow-condensed"
-                    >
+                    <span className="text-black text-[12px] tracking-[0.14em] font-bold font-barlow-condensed">
                       BOOK A CONSULTATION
                     </span>
-                    <ArrowRightIcon size={14} className="text-black" strokeWidth={2.5} />
+                    <ArrowRightIcon
+                      size={14}
+                      className="text-black"
+                      strokeWidth={2.5}
+                    />
                   </Link>
                 </motion.li>
               </ul>
@@ -149,5 +152,5 @@ export default function Navbar() {
         </AnimatePresence>
       </nav>
     </header>
-  )
+  );
 }

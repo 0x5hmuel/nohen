@@ -86,7 +86,7 @@ export default function ServiceCard({
           <Button
             variant="link"
             onClick={() => setExpanded((v) => !v)}
-            className="p-0 font-medium h-auto text-[#EFBF04] font-outfit text-[14px]  hover:underline underline-offset-2 underline transition-all duration-200"
+            className="p-0 bg-transparent h-0 font-medium  text-[#EFBF04] font-outfit text-[14px]  hover:underline underline-offset-2 underline transition-all duration-200"
           >
             {expanded ? "Read Less..." : "Read More..."}
           </Button>

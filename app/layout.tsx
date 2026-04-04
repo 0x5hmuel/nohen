@@ -1,28 +1,36 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Barlow_Condensed, DM_Sans, Outfit } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Inter,
+  Barlow_Condensed,
+  DM_Sans,
+  Outfit,
+} from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import SocialLinks from "@/ui/components/socialLinks";
+import RoutePreloader from "@/components/animations/routePreloader";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
 });
 
 const outfit = Outfit({
-  subsets: ['latin'],
-  variable: '--font-outfit',
+  subsets: ["latin"],
+  variable: "--font-outfit",
 });
 
 const barlowCondensed = Barlow_Condensed({
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-barlow-condensed'
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow-condensed",
 });
 
 const satoshi = localFont({
@@ -62,10 +70,11 @@ export default function RootLayout({
         dmSans.variable,
         barlowCondensed.variable,
         satoshi.variable,
-        outfit.variable
+        outfit.variable,
       )}
     >
       <body className="min-h-full flex flex-col w-screen">
+        <RoutePreloader />
         <Navbar />
         <main>
           {children}
