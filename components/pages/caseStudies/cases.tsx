@@ -19,7 +19,7 @@ const Cases = () => {
   return (
     <Reveal>
       <div>
-        <div className="p-17.5 bg-white space-y-5">
+        <div className="bg-white space-y-5 px-5 py-10 md:p-17.5">
           <div className="space-y-4">
             <SectionTag text="Proven Results" className="text-black" />
             <GradientText text="Here are some of our successful projects that showcase how we help our clients achieve their dream plans." />
@@ -69,26 +69,26 @@ const Cases = () => {
         </div>
         <StaggerItem>
           <div
-            className="gap-10 relative h-100 w-screen flex flex-col items-center justify-center"
+            className="relative flex w-full flex-col items-center justify-center gap-10 bg-cover bg-center px-5 py-14 md:h-100 md:w-screen md:px-0 md:py-0"
             style={{ backgroundImage: "url(/cta_banner.png)" }}
           >
             <div className="text-center space-y-4">
               <h6
-                className="font-dm-sans w-4/6 mx-auto text-[50px]"
+                className="mx-auto w-full font-dm-sans text-[30px] md:w-4/6 md:text-[50px]"
                 style={{ letterSpacing: "-8%", lineHeight: "115%" }}
               >
                 Got a project? Let’s Build SomethingThat Lasts for you!
               </h6>
               <Button
                 asChild
-                className="bg-[#EFBF04] hover:bg-[#EFBF04]/90 text-black px-4"
+                className="bg-[#EFBF04] px-4 text-black hover:bg-[#EFBF04]/90"
               >
                 <Link href="">
                   Start Building with us today <ArrowRightIcon />
                 </Link>
               </Button>
             </div>
-            <div className="absolute bottom-0">
+            <div className="absolute bottom-0 hidden md:block">
               <ArtBuildingIcon />
             </div>
           </div>

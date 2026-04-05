@@ -43,7 +43,7 @@ const ProjectItem = ({
         ease: [0.22, 1, 0.36, 1],
       }}
     >
-      <div className="relative w-full h-[360px] overflow-hidden group">
+      <div className="group relative h-[240px] w-full overflow-hidden sm:h-[300px] md:h-[360px]">
         {project.secondaryImage ? (
           <div className="flex h-full w-full">
             <div className="relative w-1/2 h-full overflow-hidden">
@@ -77,11 +77,11 @@ const ProjectItem = ({
       </div>
       <Link
         href={project.href ?? "#"}
-        className={`h-30 p-3 transition-colors duration-300 ${hovered ? 'bg-[#EFBF04]' : 'bg-[#F2F2F2]'}`}
+        className={`min-h-22 p-3 transition-colors duration-300 md:h-30 ${hovered ? 'bg-[#EFBF04]' : 'bg-[#F2F2F2]'}`}
       >
-        <div className="flex items-center justify-between w-full px-5 py-4 group/link">
+        <div className="group/link flex w-full items-center justify-between px-2 py-3 md:px-5 md:py-4">
           <span
-            className="tracking-[0.14em] font-medium text-[#181818] uppercase font-dm-sans text-[25px]"
+            className="font-dm-sans text-[20px] font-medium uppercase tracking-[0.14em] text-[#181818] md:text-[25px]"
             style={{ letterSpacing: "-0.06em", lineHeight: "180%" }}
           >
             {project.title}
@@ -108,14 +108,14 @@ export default function ProjectGrid({ projects }: ProjectGridProps) {
   }
 
   return (
-    <section className="w-full bg-[#FAFAF7] space-y-5">
+    <section className="w-full space-y-5 bg-[#FAFAF7]">
       {pairs.map((pair, pairIndex) => {
         const isEven = pairIndex % 2 === 0;
 
         return (
           <div
             key={pairIndex}
-            className={`grid gap-5 ${isEven ? "grid-cols-[3fr_2fr]" : "grid-cols-[2fr_3fr]"}`}
+            className={`grid grid-cols-1 gap-5 ${isEven ? "md:grid-cols-[3fr_2fr]" : "md:grid-cols-[2fr_3fr]"}`}
           >
             <ProjectItem project={pair[0]} index={pairIndex * 2} className="" />
             {pair[1] && (

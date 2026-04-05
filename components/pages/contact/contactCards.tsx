@@ -30,7 +30,7 @@ const content: ContactProps[] = [
 const ContactCardF = () => {
   return (
     <Reveal>
-      <Stagger className="flex  items-center justify-center py-10 gap-5 bg-pink-50">
+      <Stagger className="flex flex-col items-stretch justify-center gap-5 bg-pink-50 px-5 py-8 md:flex-row md:items-center md:px-10 md:py-10">
         {content.map((c, index: number) => (
           <StaggerItem key={index}>
             <ContactCards
@@ -53,20 +53,20 @@ function ContactCards({
   contentTwo,
 }: ContactProps) {
   return (
-    <div className="text-black w-105 min-h-86 max-h-86.75 bg-white flex flex-col space-y-8 items-center py-10">
+    <div className="text-black w-full max-w-105 bg-white flex flex-col space-y-8 items-center py-8 md:min-h-86 md:max-h-86.75 md:py-10">
       <div className="h-full w-full flex flex-col items-center justify-between space-y-5">
         <div className="h-20.5 w-20.5 bg-[#FAFAFA] rounded-full flex items-center justify-center">
           <Icon color="#8D8D8D" />
         </div>
         <h5
-          className="font-dm-sans font-medium text-[40px]"
+          className="font-dm-sans font-medium text-[28px] text-center md:text-[40px]"
           style={{ letterSpacing: "-8%", lineHeight: "114.99999999999999%" }}
         >
           {title}
         </h5>
         <div className="flex flex-col justify-start flex-1 w-full h-full">
           <div
-            className="font-satoshi text-[#8D8D8D] space-y-3 w-4/5 mx-auto text-[20px] text-center"
+            className="font-satoshi text-[#8D8D8D] space-y-3 w-full px-4 md:w-4/5 md:px-0 mx-auto text-[16px] md:text-[20px] text-center"
             style={{ letterSpacing: "-4%", lineHeight: "118%" }}
           >
             <p>{contentOne}</p>

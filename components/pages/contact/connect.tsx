@@ -10,13 +10,13 @@ const Connect = () => {
   return (
     <Reveal>
       <div className="bg-white pb-10" id="contactForm">
-        <div className=" border-b border-b-black/20 h-20">
+        <div className="hidden border-b border-b-black/20 h-20 md:block">
           <div className="w-113.75 border-r border-r-black/20 h-full"></div>
         </div>
-        <div className="grid grid-cols-[1fr_2fr] items-start">
-          <div className="border-r border-r-gray-400 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] items-start">
+          <div className="border-r border-r-gray-400/0 md:border-r-gray-400 h-full">
             <div
-              className="p-5 h-full relative"
+              className="p-5 h-full min-h-[320px] relative"
               style={{
                 backgroundImage: "url(/assets/images/Frame 2121453828.png)",
               }}
@@ -33,7 +33,7 @@ const Connect = () => {
                   className="text-white z-999999"
                 />
                 <p
-                  className="w-50 mt-auto mb-auto block h-fit font-satoshi text-[50px]  font-medium"
+                  className="w-full max-w-60 text-center mt-auto mb-auto block h-fit font-satoshi text-[34px] md:text-[50px] font-medium"
                   style={{ lineHeight: "84%", letterSpacing: "-6%" }}
                 >
                   Interior Decoration
@@ -41,17 +41,17 @@ const Connect = () => {
               </div>
             </div>
           </div>
-          <div className="p-5 w-full space-y-5 px-10">
+          <div className="p-5 w-full space-y-5 md:px-10">
             <GradientText
               text="Reach Out Today, Let’s Build Tomorrow."
-              className="text-[50px]! font-dm-sans"
+              className="text-[34px]! md:text-[50px]! font-dm-sans"
             />
             <form className="text-black [&_input]:w-full [&_input]:p-3 [&_input]:border-black/5 [&_input]:border [&_input]:h-10 [&_input]:rounded-lg flex flex-col gap-5">
-              <div className="flex gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 <input type="text" placeholder="Fullname*" />
                 <input type="text" placeholder="Phone Number" />
               </div>
-              <div className="flex gap-3">
+              <div className="flex flex-col md:flex-row gap-3">
                 <input type="email" placeholder="Email Address*" />
                 <select
                   className="w-full p-3 border-black/5 border h-10 rounded-lg text-black/50"
@@ -79,7 +79,7 @@ const Connect = () => {
               </div>
               <Button
                 type="submit"
-                className="w-fit px-5 h-17.5 bg-black text-white font-semibold uppercase rounded-full"
+                className="w-full sm:w-fit px-5 h-14 md:h-17.5 bg-black text-white font-semibold uppercase rounded-full"
               >
                 Send Us A message <ChevronRightIcon />
               </Button>

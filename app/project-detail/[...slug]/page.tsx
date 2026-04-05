@@ -1,6 +1,5 @@
 "use client";
 
-import Hero from "@/components/hero";
 import HillTop from "@/assets/images/hilltop_residence.png"
 import { useRef, useState, useCallback } from "react";
 import ProjectHero from "@/components/projectHero";
@@ -47,52 +46,52 @@ export default function ProjectDetail() {
       style={{ fontFamily: "'DM Sans', sans-serif" }}
     >
       <ProjectHero image={HillTop} text="Hilltop Residence Abuja" alt="" />
-      <section className="max-w-8xl mx-auto px-8 pt-0 pb-0 grid grid-cols-1 md:grid-cols-[500px_1fr] gap-12 border-b-2 border-b-gray-400/20">
-        <div className="border-r-2 border-r-gray-400/20">
-          <div className="py-10">
-            <h2 className="text-5xl font-medium leading-tight mb-3" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>
+      <section className="max-w-8xl mx-auto grid grid-cols-1 gap-8 border-b-2 border-b-gray-400/20 px-5 pt-0 pb-0 md:grid-cols-[500px_1fr] md:gap-12 md:px-8">
+        <div className="md:border-r-2 md:border-r-gray-400/20 border-b border-b-gray-400/20 md:border-b-0">
+          <div className="py-8 md:py-10">
+            <h2 className="text-3xl md:text-5xl font-medium leading-tight mb-3" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>
               Details about
               <br />
               the project
             </h2>
-            <p className="text-2xl font-satoshi text-black/50 mb-8 leading-relaxed" style={{ lineHeight: "120%" }}>
+            <p className="text-base sm:text-lg md:text-2xl font-satoshi text-black/50 mb-8 leading-relaxed" style={{ lineHeight: "120%" }}>
               Unleashing the energy of innovation through intelligent,
               performance-driven design.
             </p>
-            <div className="grid grid-cols-2 gap-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-4">
               <div>
                 <p className="text-base font-satoshi uppercase tracking-widest text-gray-400 mb-1" style={{ letterSpacing: "-4%", lineHeight: "118%" }}>
                   Client
                 </p>
-                <p className="text-2xl font-medium" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>Sarah Collins</p>
+                <p className="text-xl md:text-2xl font-medium" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>Sarah Collins</p>
               </div>
               <div>
                 <p className="text-base font-satoshi uppercase tracking-widest text-gray-400 mb-1" style={{ letterSpacing: "-4%", lineHeight: "118%" }}>
                   Location
                 </p>
-                <p className="text-2xl font-medium" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>Nijmegen, NED</p>
+                <p className="text-xl md:text-2xl font-medium" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>Nijmegen, NED</p>
               </div>
               <div>
                 <p className="text-base font-satoshi uppercase tracking-widest text-gray-400 mb-1" style={{ letterSpacing: "-4%", lineHeight: "118%" }}>
                   Total Area
                 </p>
-                <p className="text-2xl font-medium" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>1209 sqm</p>
+                <p className="text-xl md:text-2xl font-medium" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>1209 sqm</p>
               </div>
               <div>
                 <p className="text-base font-satoshi uppercase tracking-widest text-gray-400 mb-1" style={{ letterSpacing: "-4%", lineHeight: "118%" }}>
                   Timeline
                 </p>
-                <p className="text-2xl font-medium" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>2014</p>
+                <p className="text-xl md:text-2xl font-medium" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>2014</p>
               </div>
             </div>
           </div>
         </div>
         <div>
-          <div className="py-10">
-            <h1 className="text-5xl md:text-5xl font-medium leading-tight mb-6" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>
+          <div className="py-8 md:py-10">
+            <h1 className="text-3xl md:text-5xl font-medium leading-tight mb-6" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>
               Hilltop Residence represents the intersection of energy and design
             </h1>
-            <div className="space-y-4 text-2xl font-satoshi text-gray-400 leading-relaxed" style={{ letterSpacing: "-4%", lineHeight: "120%" }}>
+            <div className="space-y-4 text-base sm:text-lg md:text-2xl font-satoshi text-gray-400 leading-relaxed" style={{ letterSpacing: "-4%", lineHeight: "120%" }}>
               <p>
                 Nohen Constructii Ltd is an architectural and construction
                 practice dedicated to delivering thoughtful, enduring, and
@@ -121,14 +120,14 @@ export default function ProjectDetail() {
           </div>
         </div>
       </section>
-      <section className="py-12">
-        <div className="max-w-6xl mx-auto px-8 mb-8 text-center">
-          <h2 className="text-5xl font-dm-sans md:text-5xl font-medium mb-2" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>
+      <section className="py-10 md:py-12">
+        <div className="max-w-6xl mx-auto px-5 md:px-8 mb-8 text-center">
+          <h2 className="text-3xl font-dm-sans md:text-5xl font-medium mb-2" style={{ letterSpacing: "-8%", lineHeight: "115.5%" }}>
             Different view of the project
           </h2>
-          <p className="text-2xl font-satoshi text-gray-400" style={{ letterSpacing: "-4%", lineHeight: "120%" }}>
+          <p className="text-base md:text-2xl font-satoshi text-gray-400" style={{ letterSpacing: "-4%", lineHeight: "120%" }}>
             Good design is invisible. It supports life quietly,
-            <br />
+            <br className="hidden md:block" />
             with clarity and purpose.
           </p>
         </div>
@@ -136,7 +135,7 @@ export default function ProjectDetail() {
         {/* Scrollable Strip */}
         <div
           ref={scrollRef}
-          className="flex gap-3 overflow-x-auto px-8 scroll-smooth"
+          className="flex gap-3 overflow-x-auto px-5 md:px-8 scroll-smooth"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
           {PROJECT_IMAGES.map((img, i) => {
@@ -147,8 +146,8 @@ export default function ProjectDetail() {
                 onClick={() => scrollToIndex(i)}
                 className="relative flex-shrink-0 cursor-pointer overflow-hidden transition-all duration-500"
                 style={{
-                  width: isActive ? 340 : 160,
-                  height: isActive ? 260 : 200,
+                  width: isActive ? "min(75vw, 340px)" : "min(42vw, 160px)",
+                  height: isActive ? "min(55vw, 260px)" : "min(48vw, 200px)",
                   alignSelf: "center",
                   borderRadius: 4,
                 }}
@@ -174,7 +173,7 @@ export default function ProjectDetail() {
                 </div>
                 {isActive && (
                   <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                    <div className="bg-[#EFBF04]/90 text-[#181818] text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-sm">
+                    <div className="bg-[#EFBF04]/90 text-[#181818] text-[10px] font-bold uppercase tracking-widest px-3 py-2 rounded-sm md:px-4">
                       Click to expand
                     </div>
                     <p className="text-black text-xs mt-1">{img.label}</p>
@@ -213,4 +212,3 @@ export default function ProjectDetail() {
     </div>
   );
 }
-
