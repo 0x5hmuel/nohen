@@ -14,7 +14,7 @@ const locations = [
 const Locations = () => {
   return (
     <Reveal>
-      <section className="p-17.5 bg-white grid md:grid-cols-2 relative md:min-h-129.25 items-center">
+      <section className="p-8 md:p-17.5 bg-white grid md:grid-cols-2 relative md:min-h-129.25 items-center">
         <div className="space-y-8">
           <SectionTag text="our locations" className="text-black" />
           <GradientText

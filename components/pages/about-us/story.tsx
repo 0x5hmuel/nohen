@@ -10,7 +10,10 @@ const texts = [
 const Story = () => {
   return (
     <Reveal>
-      <div className="grid grid-cols-[1fr_3fr] bg-black p-17.5" id="ourStory">
+      <div
+        className="grid grid-cols-1 gap-8 bg-black p-8 md:grid-cols-[1fr_3fr] md:gap-0 md:p-17.5"
+        id="ourStory"
+      >
         <div>
           <SectionTag text="Our story" className="text-white" />
         </div>
@@ -18,7 +21,7 @@ const Story = () => {
           {texts.map((text, index: number) => (
             <StaggerItem key={index}>
               <p
-                className="font-outfit text-transparent text-left font-light md:text-[35px] bg-linear-to-r bg-clip-text from-gray-200 to-[#eFBF04]"
+                className="font-outfit text-transparent text-left font-light text-[24px] md:text-[35px] bg-linear-to-r bg-clip-text from-gray-200 to-[#eFBF04]"
                 style={{
                   letterSpacing: "-4%",
                   lineHeight: "120%",

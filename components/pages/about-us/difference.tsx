@@ -10,8 +10,8 @@ import { Reveal, Stagger, StaggerItem } from "@/components/animations/reveal";
 const Difference = () => {
   return (
     <Reveal>
-      <div className="p-17.5 space-y-8">
-        <div className="w-4/6">
+      <div className="p-8 md:p-17.5 space-y-8">
+        <div className="lg:w-4/6">
           <GradientText
             text="What sets Nohen Constructii Ltd apart is our deliberate pursuit of complexity."
             className="from-white/60"

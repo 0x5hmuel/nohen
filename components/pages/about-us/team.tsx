@@ -19,14 +19,14 @@ const teamMembers = [
 const Team = () => {
   return (
     <Reveal>
-      <section id="ourTeam" className="bg-white p-17.5 ">
+      <section id="ourTeam" className="bg-white p-8 md:p-17.5 ">
         <div className="space-y-10">
           <SectionTag text="our team" className="text-black" />
-          <div className="flex items-center text-[25px]">
+          <div className="flex items-center text-[25px] md:flex-row flex-col">
             <GradientText text="Meet the brilliant team powering our architectural innovations." />
-            <div className="">
+            <div className="space-y-5">
               <p
-                className="font-outfit text-right font-light"
+                className="font-outfit text-left md:text-right font-light"
                 style={{ color: "gray" }}
               >
                 Our dedicated team members are here to serve you with excellence
@@ -34,7 +34,7 @@ const Team = () => {
               </p>
             </div>
           </div>
-          <Stagger className="grid grid-cols-3 gap-6">
+          <Stagger className="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-6">
             {teamMembers.map((team, index: number) => (
               <StaggerItem key={index}>
                 <TeamImages

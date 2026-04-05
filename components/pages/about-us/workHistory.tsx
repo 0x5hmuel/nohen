@@ -26,8 +26,7 @@ const WorkHistory = () => {
       <div className="bg-white p-10 space-y-10">
         <div className="relative">
           <h4
-            className="font-dm-sans font-medium text-[160px] uppercase bg-clip-text text-transparent bg-cover bg-center"
-            style={{
+            className="font-dm-sans font-medium text-[50px] md:text-[100px] lg:text-[160px] uppercase bg-clip-text text-transparent bg-cover bg-center" style={{
               letterSpacing: "-8%",
               lineHeight: "88%",
               backgroundImage: `url(${ServicesHero.src})`,
@@ -39,8 +38,8 @@ const WorkHistory = () => {
         <Stagger className="w-full mx-auto border-2 divide-y border-black/2 rounded-sm divide-gray-200">
           {awards.map((award) => (
             <StaggerItem key={award.year}>
-              <div className="grid grid-cols-[240px_1fr] py-8 items-start h-full">
-                <span className="text-gray-400 text-base font-dm-sans h-full">
+              <div className="grid grid-cols-1 space-y-5 px-5 md:grid-cols-[240px_1fr] py-8 items-start h-full">
+                <span className="text-gray-400 text-2xl md:text-base font-dm-sans h-full">
                   {award.year}
                 </span>
 

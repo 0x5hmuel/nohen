@@ -6,7 +6,7 @@ const Mission = () => {
     <Reveal>
       <section
         id="mission"
-        className="p-17.5 grid md:grid-cols-2 gap-x-24 bg-black"
+        className="p-8 md:p-17.5 space-y-5 grid md:grid-cols-2 gap-x-24 bg-black"
       >
         <div className="space-y-5 flex flex-col justify-between">
           <SectionTag text="Our Vision" className="text-white" />
