@@ -6,8 +6,17 @@ import { motion } from "motion/react";
 import bgImage from "@/assets/images/footer.png";
 import HorizontalImages from "@/assets/images/horizontal_lines.png";
 import { ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 export default function Footer() {
+  const quickLinks = [
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Case Studies", href: "/case-studies" },
+    { label: "Services", href: "/services" },
+    { label: "Contact Us", href: "/contact" },
+  ];
+
   return (
     <footer className="relative w-full font-dm-sans text-white overflow-hidden h-208.5">
       {/* Background Image */}
@@ -34,11 +43,13 @@ export default function Footer() {
             Quick Links
           </h4>
           <ul className="space-y-2 text-lg text-gray-300">
-            <li className="hover:text-white transition">Home</li>
-            <li className="hover:text-white transition">About Us</li>
-            <li className="hover:text-white transition">Case Studies</li>
-            <li className="hover:text-white transition">Services</li>
-            <li className="hover:text-white transition">Contact Us</li>
+            {quickLinks.map(({ label, href }) => (
+              <li key={href}>
+                <Link href={href} className="hover:text-white transition">
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div>

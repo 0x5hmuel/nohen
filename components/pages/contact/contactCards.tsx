@@ -30,18 +30,20 @@ const content: ContactProps[] = [
 const ContactCardF = () => {
   return (
     <Reveal>
-      <Stagger className="flex flex-col items-stretch justify-center gap-5 bg-pink-50 px-5 py-8 md:flex-row md:items-center md:px-10 md:py-10">
-        {content.map((c, index: number) => (
-          <StaggerItem key={index}>
-            <ContactCards
-              title={c.title}
-              icon={c.icon}
-              contentOne={c.contentOne}
-              contentTwo={c.contentTwo}
-            />
-          </StaggerItem>
-        ))}
-      </Stagger>
+      <div id="contactLines">
+        <Stagger className="flex flex-col items-stretch justify-center gap-5 bg-pink-50 px-5 py-8 md:flex-row md:items-center md:px-10 md:py-10" >
+          {content.map((c, index: number) => (
+            <StaggerItem key={index}>
+              <ContactCards
+                title={c.title}
+                icon={c.icon}
+                contentOne={c.contentOne}
+                contentTwo={c.contentTwo}
+              />
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </div>
     </Reveal>
   );
 };
@@ -53,7 +55,7 @@ function ContactCards({
   contentTwo,
 }: ContactProps) {
   return (
-    <div className="text-black w-full max-w-105 bg-white flex flex-col space-y-8 items-center py-8 md:min-h-86 md:max-h-86.75 md:py-10">
+    <div className="text-black w-full lg:min-w-105 bg-white flex flex-col space-y-8 items-center py-8 md:min-h-86 md:max-h-86.75 md:py-10">
       <div className="h-full w-full flex flex-col items-center justify-between space-y-5">
         <div className="h-20.5 w-20.5 bg-[#FAFAFA] rounded-full flex items-center justify-center">
           <Icon color="#8D8D8D" />

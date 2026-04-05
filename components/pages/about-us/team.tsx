@@ -1,5 +1,4 @@
 import GradientText from "@/components/gradientText";
-import { motion } from "motion/react";
 import SectionTag from "@/components/sectionTag";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
@@ -8,7 +7,11 @@ import UserTwo from "@/assets/images/user_two.png";
 import { Reveal, Stagger, StaggerItem } from "@/components/animations/reveal";
 
 const teamMembers = [
-  { image: UserOne, name: "Jane Doe", role: "Lead Architect" },
+  {
+    image: UserOne,
+    name: "H.O Amaije-Ufomba (M.CIPMN)",
+    role: "MD, Founder of Nohen Constructii Ltd",
+  },
   { image: UserTwo, name: "John Smith", role: "Structural Engineer" },
   { image: UserOne, name: "Amaka Obi", role: "Interior Designer" },
   { image: UserTwo, name: "Emeka Nwosu", role: "Project Manager" },
@@ -72,30 +75,17 @@ export const TeamImages = ({
         alt={alt}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <motion.div
-        className="absolute inset-0 bg-black/60 flex flex-col justify-end p-5"
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
-        transition={{ duration: 0.3 }}
-      >
-        <motion.p
-          className="font-dm-sans text-white text-[18px] font-semibold"
+      <div className="absolute inset-0 flex flex-col justify-end bg-black/60 p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+        <p
+          className="font-dm-sans text-white text-[18px] font-semibold translate-y-3 opacity-0 transition-all duration-300 delay-75 group-hover:translate-y-0 group-hover:opacity-100"
           style={{ letterSpacing: "-0.02em" }}
-          initial={{ y: 12, opacity: 0 }}
-          whileHover={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.3, delay: 0.05 }}
         >
           {name}
-        </motion.p>
-        <motion.p
-          className="font-outfit text-[#EFBF04] text-[13px] font-light"
-          initial={{ y: 12, opacity: 0 }}
-          whileHover={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.3, delay: 0.1 }}
-        >
+        </p>
+        <p className="font-outfit text-[#EFBF04] text-[13px] font-light translate-y-3 opacity-0 transition-all duration-300 delay-100 group-hover:translate-y-0 group-hover:opacity-100">
           {role}
-        </motion.p>
-      </motion.div>
+        </p>
+      </div>
     </div>
   );
 };

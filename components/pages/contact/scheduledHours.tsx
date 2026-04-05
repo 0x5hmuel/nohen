@@ -47,7 +47,7 @@ const ScheduledHours = () => {
               className="py-2.5 px-7.5 h-14 md:h-17.5 w-full sm:w-fit rounded-full text-black uppercase bg-[#EFBF04] hover:bg-[#EFBF04]/90 font-semibold"
               asChild
             >
-              <Link href="">
+              <Link href="https://cal.com" target="_blank">
                 Get Appointment <ArrowRightIcon />
               </Link>
             </Button>

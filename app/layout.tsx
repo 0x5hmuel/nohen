@@ -65,6 +65,7 @@ export default function RootLayout({
         "h-full",
         "antialiased",
         geistSans.variable,
+        "overflow-x-hidden",
         geistMono.variable,
         inter.variable,
         dmSans.variable,

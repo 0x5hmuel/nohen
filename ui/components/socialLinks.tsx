@@ -78,7 +78,7 @@ const SocialLink = ({ href, name }: { href: string; name: string }) => {
 
 const SocialLinks = () => {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 border bg-white">
+    <div className="grid grid-cols-2 lg:grid-cols-4 border bg-white overflow-x-hidden">
       {socials.map((link, i) => (
         <SocialLink key={i} href={link.href} name={link.name} />
       ))}

@@ -42,7 +42,7 @@ const Page = () => {
           buttonText="Call Us Today"
           alt=""
           image={ServicesHero}
-          buttonLink=""
+          buttonLink="/contact#contactLines"
           metaText=""
           isLink={true}
           key={"services"}

@@ -72,7 +72,7 @@ const Cases = () => {
             className="relative flex w-full flex-col items-center justify-center gap-10 bg-cover bg-center px-5 py-14 md:h-100 md:w-screen md:px-0 md:py-0"
             style={{ backgroundImage: "url(/cta_banner.png)" }}
           >
-            <div className="text-center space-y-4">
+            <div className="text-center space-y-4 z-30">
               <h6
                 className="mx-auto w-full font-dm-sans text-[30px] md:w-4/6 md:text-[50px]"
                 style={{ letterSpacing: "-8%", lineHeight: "115%" }}
@@ -83,7 +83,7 @@ const Cases = () => {
                 asChild
                 className="bg-[#EFBF04] px-4 text-black hover:bg-[#EFBF04]/90"
               >
-                <Link href="">
+                <Link href="/contact#workHours">
                   Start Building with us today <ArrowRightIcon />
                 </Link>
               </Button>
