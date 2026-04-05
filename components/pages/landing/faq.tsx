@@ -42,7 +42,7 @@ const Faq = () => {
         id="faq"
         className="relative bg-white px-5 py-12 md:px-10 lg:h-216.5 lg:max-h-164 lg:px-17.5 lg:py-0"
       >
-        <div className="flex w-full flex-col gap-8 lg:flex-row lg:justify-between lg:gap-x-10">
+        <div className="flex w-full flex-col gap-8 py-24 lg:flex-row lg:justify-between lg:gap-x-10">
           <div className="w-full space-y-3 lg:flex lg:flex-col lg:justify-center">
             <GradientText text="You ask, We answer!" />
             <div className="w-full text-black md:w-4/6">
