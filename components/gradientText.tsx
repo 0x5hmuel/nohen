@@ -7,11 +7,15 @@ interface Props {
 
 const GradientText = ({ className, text }: Props) => {
   return (
-    <p className={`${clsx('sm:text-[35px] text-[40px] md:text-[50px] lg:text-[50px] font-dm-sans bg-linear-to-r text-transparent from-[#181818] to-[#EFBF04] bg-clip-text', className)}`} style={{
-      letterSpacing: "-8%"
+    <p
+      className={`${clsx("text-[25px] md:text-[50px] lg:text-[50px] font-dm-sans bg-linear-to-r text-transparent from-[#181818] to-[#EFBF04] bg-clip-text", className)}`}
+      style={{
+        letterSpacing: "-8%",
+      }}
+    >
+      {text}
+    </p>
+  );
+};
 
-    }}>{text}</p>
-  )
-}
-
-export default GradientText
+export default GradientText;

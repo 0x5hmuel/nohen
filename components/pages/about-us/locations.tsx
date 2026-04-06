@@ -24,7 +24,7 @@ const Locations = () => {
           <div className="text-black space-y-3">
             {locations.map(({ title, location }, index: number) => (
               <div className="bg-gray-100 p-4" key={index}>
-                <p className="font-dm-sans text-[50px]">{title}</p>
+                <p className="font-dm-sans text-[30px] md:text-[50px]">{title}</p>
                 <p className="text-gray-400 font-light font-outfit">
                   {location}
                 </p>

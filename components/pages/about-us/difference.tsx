@@ -53,7 +53,7 @@ export const DifferenceCards = () => {
       {differenceCardInfo.map(({ title, image }, index: number) => (
         <StaggerItem key={index}>
           <div className="p-8 gap-10 relative h-full  flex items-center">
-            <p className="text-white font-satoshi text-[25px]">{title}</p>
+            <p className="text-white font-satoshi text-xl md:text-[25px]">{title}</p>
             <Image
               alt={title}
               src={image}

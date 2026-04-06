@@ -23,10 +23,10 @@ const Team = () => {
         <div className="space-y-10">
           <SectionTag text="our team" className="text-black" />
           <div className="flex items-center text-[25px] md:flex-row flex-col">
-            <GradientText text="Meet the brilliant team powering our architectural innovations." />
+            <GradientText text="Meet the brilliant team powering our architectural innovations." className="text-[30px]! md:text-[50px]! lg:text-[50px]!" />
             <div className="space-y-5">
               <p
-                className="font-outfit text-left md:text-right font-light"
+                className="font-outfit text-left md:text-right font-light text-[20px] md:text-base"
                 style={{ color: "gray" }}
               >
                 Our dedicated team members are here to serve you with excellence
