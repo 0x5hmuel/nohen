@@ -57,7 +57,7 @@ const Connect = () => {
                   className="w-full p-3 border-black/5 border h-10 rounded-lg text-black/50"
                   defaultValue=""
                 >
-                  <option value="" disabled className="text-[10px]">
+                  <option value="" disabled className="text-[10px] py-3">
                     Service of interest*
                   </option>
                   <option value="architectural-design">
