@@ -81,7 +81,7 @@ const WorkHistory = () => {
                   <button
                     type="button"
                     onClick={() => setSelectedAward(award)}
-                    className="w-fit text-[#EFBF04] font-satoshi text-lg font-medium text-left hover:underline"
+                    className="w-fit text-[#EFBF04] font-satoshi capitalize text-lg font-medium text-left hover:underline"
                     style={{ letterSpacing: "-8%", lineHeight: "115%" }}
                   >
                     {award.subtitle}

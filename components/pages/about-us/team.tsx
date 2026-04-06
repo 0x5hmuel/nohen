@@ -14,9 +14,6 @@ const teamMembers = [
   },
   { image: UserTwo, name: "John Smith", role: "Structural Engineer" },
   { image: UserOne, name: "Amaka Obi", role: "Interior Designer" },
-  { image: UserTwo, name: "Emeka Nwosu", role: "Project Manager" },
-  { image: UserOne, name: "Sara Ali", role: "Urban Planner" },
-  { image: UserTwo, name: "David Eze", role: "Site Supervisor" },
 ];
 
 const Team = () => {
