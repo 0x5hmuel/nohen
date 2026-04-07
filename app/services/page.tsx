@@ -62,10 +62,11 @@ const Page = () => {
                   <li
                     key={index}
                     onClick={scrollToService}
-                    className={`cursor-pointer text-[18px] font-dm-sans transition-all duration-300 lg:text-[25px] ${isActive
-                      ? "bg-linear-to-r from-[#181818] to-[#EFBF04] bg-clip-text text-transparent border-b-2 border-[#EFBF04]"
-                      : "text-black"
-                      }`}
+                    className={`cursor-pointer text-[18px] font-dm-sans transition-all duration-300 lg:text-[25px] ${
+                      isActive
+                        ? "bg-linear-to-r from-[#181818] to-[#EFBF04] bg-clip-text text-transparent border-b-2 border-[#EFBF04]"
+                        : "text-black"
+                    }`}
                   >
                     <p>{service.name}</p>
                   </li>
@@ -123,7 +124,7 @@ const Page = () => {
             reverse={false}
           />
         </div>
-        <section className="bg-[#EFBF04] py-12 overflow-hidden space-y-8">
+        {/* <section className="bg-[#EFBF04] py-12 overflow-hidden space-y-8">
           <div id="supportedBrands" className="relative space-y-8">
             <div className="absolute left-0 top-0 bottom-0 w-32 bg-linear-to-r from-[#EFBF04] to-transparent z-10" />
             <div className="absolute right-0 top-0 bottom-0 w-32 bg-linear-to-l from-[#EFBF04] to-transparent z-10" />
@@ -149,7 +150,7 @@ const Page = () => {
               ))}
             </div>
           </div>
-        </section>
+        </section> */}
       </section>
     </PageFade>
   );
