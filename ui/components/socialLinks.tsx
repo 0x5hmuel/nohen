@@ -1,40 +1,43 @@
-"use client"
-import { ArrowUpRightIcon } from "lucide-react"
-import { motion, AnimatePresence } from "motion/react"
-import { useState, useRef } from "react"
+"use client";
+import { ArrowUpRightIcon } from "lucide-react";
+import { motion, AnimatePresence } from "motion/react";
+import { useState, useRef } from "react";
 
 const socials = [
-  { href: "www.tiktok.com/@nohenconstructiiltd", name: "TikTok" },
+  { href: "https://www.tiktok.com/@nohenconstructiiltd", name: "TikTok" },
   { href: "#", name: "Twitter" },
   { href: "#", name: "LinkedIn" },
-  { href: "https://www.instagram.com/nohenconstructiiltd?igsh=ZGd5Yjd5czJkcmky&utm_source=qr", name: "Instagram" },
-]
+  {
+    href: "https://www.instagram.com/nohenconstructiiltd?igsh=ZGd5Yjd5czJkcmky&utm_source=qr",
+    name: "Instagram",
+  },
+];
 
 const SocialLink = ({ href, name }: { href: string; name: string }) => {
-  const [origin, setOrigin] = useState({ x: 0, y: 0 })
-  const [hovered, setHovered] = useState(false)
-  const ref = useRef<HTMLAnchorElement>(null)
+  const [origin, setOrigin] = useState({ x: 0, y: 0 });
+  const [hovered, setHovered] = useState(false);
+  const ref = useRef<HTMLAnchorElement>(null);
 
   const handleMouseEnter = (e: React.MouseEvent) => {
     if (ref.current) {
-      const rect = ref.current.getBoundingClientRect()
+      const rect = ref.current.getBoundingClientRect();
       setOrigin({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
-      })
-      setHovered(true)
+      });
+      setHovered(true);
     }
-  }
+  };
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (ref.current && hovered) {
-      const rect = ref.current.getBoundingClientRect()
+      const rect = ref.current.getBoundingClientRect();
       setOrigin({
         x: e.clientX - rect.left,
         y: e.clientY - rect.top,
-      })
+      });
     }
-  }
+  };
 
   return (
     <a
@@ -73,8 +76,8 @@ const SocialLink = ({ href, name }: { href: string; name: string }) => {
       </p>
       <ArrowUpRightIcon className="relative z-10 group-hover:text-black transition-colors duration-300" />
     </a>
-  )
-}
+  );
+};
 
 const SocialLinks = () => {
   return (
@@ -83,7 +86,7 @@ const SocialLinks = () => {
         <SocialLink key={i} href={link.href} name={link.name} />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default SocialLinks
+export default SocialLinks;
