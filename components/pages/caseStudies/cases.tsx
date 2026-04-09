@@ -7,7 +7,7 @@ import EstaazHotel from "@/assets/images/estaaz.png";
 import MultiStorey from "@/assets/images/multi_storey.png";
 import EzialaImage from "@/assets/images/eziala_town_hall.png";
 import HillTop from "@/assets/images/hilltop_residence.png";
-import CountyImage from "@/assets/images/county_residence.png";
+import CountyImage from "@/assets/images/county_home.png";
 
 import ArtBuildingIcon from "@/assets/svgs/67936b860d8d5785d46f8cca_building 1.svg";
 import { Button } from "@/components/ui/button";

@@ -32,7 +32,7 @@ const Locations = () => {
             ))}
           </div>
         </div>
-        <div className="relative h-full min-h-[500px]">
+        <div className="relative h-full min-h-[600px]">
           <Image
             src={AboutImage}
             fill

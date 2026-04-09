@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import ArrowIcon from "@/assets/svgs/arrow.svg";
 import ProjectCards, { ProjectCard } from "@/components/projectCard";
 import ImageFive from "@/assets/images/hilltop_residence.png";
-import ImageSix from "@/assets/images/extaaz_hotel.png";
-import CorporateOffice from "@/assets/images/avm_residential.png";
+import ImageSix from "@/assets/images/county_home.png";
+import CorporateOffice from "@/assets/images/eziala_town_hall.png";
 import Link from "next/link";
 import { Reveal } from "@/components/animations/reveal";
 
@@ -17,18 +17,18 @@ const projectCard: ProjectCard[] = [
     href: "/project-detail/hilltop-residence-abuja",
   },
   {
-    title: "Estaaz Hotel - Owerri",
+    title: "County Home - Abia",
     description:
       "Contemporary residential project designed with clean architectural lines, spacious interiors.",
     image: ImageSix,
-    href: "/project-detail/estaaz-hotel-owerri",
+    href: "/project-detail/county-home-abia",
   },
   {
-    title: "AVM Residential Apartments - Enugu",
+    title: "Eziala Town Hall - Mbise",
     description:
       "A well-planned commercial office development featuring modern design, efficient workspace.",
     image: CorporateOffice,
-    href: "/project-detail/avm-residential-apartments-enugu",
+    href: "/project-detail/eziala-town-hall-mbise",
   },
 ];
 

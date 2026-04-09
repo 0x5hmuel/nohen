@@ -32,7 +32,7 @@ export default function ProjectCards({ cards }: ProjectCardsProps) {
               className="object-cover"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/20 to-black/70" />
             <div className="absolute right-4 top-4 z-10">
               <Link
                 href={card.href ?? "#"}
