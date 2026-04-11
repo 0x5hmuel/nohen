@@ -204,7 +204,7 @@ const Testimonials = () => {
                 </Link>
               </Button>
             </div>
-            <ArtIcon className="w-full max-w-[260px] sm:max-w-[320px] lg:max-w-full" />
+            <ArtIcon className="w-full max-w-[260px] hidden md:block lg:max-w-full" />
           </div>
         </div>
       </section>
